@@ -6,12 +6,13 @@
     }
 
     $servername = "localhost";
+    $port = 8889;
     $username = "david";
     $password = "12345678";
     $dbname = "ejercicios_html_php";
 
     // Create connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    $conn = new mysqli($servername, $username, $password, $dbname, $port);
     // Check connection
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
