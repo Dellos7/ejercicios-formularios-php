@@ -14,6 +14,8 @@ if ($conn->connect_error) {
   die("Falló la conexión: " . $conn->connect_error);
 }
 
+$conn->set_charset("utf8");
+
 // sql to create table
 $sql = "CREATE TABLE ejercicio3 (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
