@@ -23,7 +23,7 @@
         if ($conn->connect_error) {
             die("Connection failed: " . $conn->connect_error);
         }
-
+        $conn->set_charset("utf8mb4");
         $sqlSelect = "SELECT usuario FROM ejercicio3 WHERE usuario = ?";
         $stmtSelect = $conn->prepare( $sqlSelect );
         $stmtSelect->bind_param("s", $_POST["usuario"]);
